@@ -78,4 +78,3 @@ export function Navbar() {
   )
 }
 
-export { Navbar }
