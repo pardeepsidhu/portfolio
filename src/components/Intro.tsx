@@ -28,6 +28,8 @@ const containerVariants = {
   },
 }
 
+
+
 const itemVariants = {
   hidden: { opacity: 0, y: 30 },
   visible: { 
@@ -49,7 +51,7 @@ const subtleFloatAnimation = {
       duration: 6,
       ease: "easeInOut",
       repeat: Infinity,
-      repeatType: "loop"
+      repeatType: "loop" as "loop"
     }
   }
 }
@@ -189,7 +191,7 @@ export function ProfessionalIntro() {
             </motion.div>
             <motion.h1
               variants={itemVariants}
-              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-800 tracking-tight drop-shadow-xl mb-5 bg-gradient-to-r from-indigo-700 via-blue-700 to-indigo-800 bg-clip-text text-transparent"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight drop-shadow-xl mb-5 bg-gradient-to-r from-indigo-700 via-blue-700 to-indigo-800 bg-clip-text text-transparent"
             >
               Pardeep Singh
             </motion.h1>
@@ -402,7 +404,17 @@ export function ProfessionalIntro() {
   )
 }
 
-function ContactCard({ icon, label, value, href, color }) {
+import { ReactNode } from "react"
+
+type ContactCardProps = {
+  icon: ReactNode
+  label: string
+  value: string
+  href?: string
+  color: "indigo" | "blue"
+}
+
+function ContactCard({ icon, label, value, href, color }: ContactCardProps) {
   const gradients = {
     indigo: "from-indigo-50/90 to-white/90 hover:from-indigo-100/90 hover:to-white/100 border-indigo-200/70 hover:border-indigo-400/80",
     blue: "from-blue-50/90 to-white/90 hover:from-blue-100/90 hover:to-white/100 border-blue-200/70 hover:border-blue-400/80",
@@ -440,3 +452,22 @@ function ContactCard({ icon, label, value, href, color }) {
     </motion.div>
   )
 }
+
+// Example: Array of contact cards with types
+const contactCards: ContactCardProps[] = [
+  {
+    icon: <Mail className="w-5 h-5" />,
+    label: "Email",
+    value: "sihdupardeep618@yahoo.com",
+    href: "mailto:sihdupardeep618@yahoo.com",
+    color: "indigo",
+  },
+  {
+    icon: <Phone className="w-5 h-5" />,
+    label: "Phone",
+    value: "+91 82840 12817",
+    href: "tel:+918284012817",
+    color: "blue",
+  },
+  // ...add more cards as needed
+]
