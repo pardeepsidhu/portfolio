@@ -43,7 +43,7 @@ export function Experience() {
           >
             <div className="flex items-start gap-3 flex-wrap mb-4">
               <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-white via-blue-100 to-blue-200 flex items-center justify-center shadow-lg border-2 border-blue-200/60 relative">
-                <Image
+                <img
                   src="/outthink.png"
                   alt="Outthink Global Communications"
                   width={40}

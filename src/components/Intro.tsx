@@ -89,6 +89,27 @@ export function ProfessionalIntro() {
 
   return (
     <section id="info" className="min-h-screen w-full overflow-hidden relative pt-4 sm:pt-10 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
+
+            {/* Animated, interactive background blobs and gradients */}
+<div className="absolute top-0 left-0 w-60 h-60 bg-blue-400 rounded-full opacity-30 blur-3xl animate-pulse-slow pointer-events-none" style={{ zIndex: 0 }} />
+<div className="absolute bottom-0 right-0 w-80 h-80 bg-purple-400 rounded-full opacity-30 blur-3xl animate-pulse-slower pointer-events-none" style={{ zIndex: 0 }} />
+<div
+  className="absolute top-1/2 left-1/2 w-[32rem] h-[32rem] rounded-full opacity-10 pointer-events-none"
+  style={{
+    background: `radial-gradient(circle at 60% 40%, #7c3aed 0%, transparent 70%)`,
+    transform: 'translate(-50%, -50%)',
+    filter: 'blur(40px)',
+    zIndex: 0
+  }}
+/>
+
+{/* Extra animated gradient overlays */}
+<div className="absolute inset-0 pointer-events-none z-0">
+  <div className="absolute left-1/4 top-0 w-1/2 h-32 bg-gradient-to-r from-indigo-300 via-blue-200 to-transparent opacity-40 blur-2xl rounded-full animate-gradient-x" />
+  <div className="absolute right-0 bottom-1/4 w-1/3 h-24 bg-gradient-to-l from-blue-300 via-indigo-200 to-transparent opacity-30 blur-2xl rounded-full animate-gradient-y" />
+  <div className="absolute left-0 bottom-0 w-1/3 h-24 bg-gradient-to-tr from-purple-300 via-indigo-200 to-transparent opacity-20 blur-2xl rounded-full animate-gradient-x" />
+</div>
+
       {/* Animated Background Elements */}
       {isMounted && (
         <>
@@ -165,7 +186,7 @@ export function ProfessionalIntro() {
             transition={{ type: "spring", stiffness: 200, damping: 15 }}
           >
             <div className="absolute inset-0 bg-gradient-to-br from-indigo-300/40 to-blue-300/40 mix-blend-overlay" />
-            <Image
+            <img
               src="/Logo.jpeg"
               height={224}
               width={224}
