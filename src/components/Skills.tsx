@@ -241,8 +241,8 @@ export function Footer() {
         </div>
       </div>
 
-      {/* Decorative Elements */}
-      <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-blue-400 via-indigo-500 to-purple-600"></div>
+
+    
     </footer>
   )
 }

@@ -412,7 +412,7 @@ export function ProfessionalIntro() {
                 icon={<BookOpen className="w-5 h-5" />} 
                 label="Resume"
                 value="Download CV"
-                href="#"
+                href="https://drive.google.com/file/d/1YWMKYMiLgO9R1V1oQGREK042JSU93nfc/view?usp=sharing"
                 color="blue"
               />
             </div>
